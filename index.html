@@ -20,6 +20,11 @@
         .view{
             display: none;
         }
+        .selected{
+            background-color: #e28d25 !important;
+            border-color: #e28d25 !important;
+            color: #fff !important;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -41,7 +46,7 @@
             <source src="assets/audio_e.mp3" type="audio/mpeg">
         </audio>
         <br><br>
-        <a id="audio_m" class="btn btn-light" tabindex="-1" role="button" aria-disabled="false">मराठी</a>
+        <a id="audio_m" class="btn btn-light selected" tabindex="-1" role="button" aria-disabled="false">मराठी</a>
         <a id="audio_h" class="btn btn-light" tabindex="-1" role="button" aria-disabled="false">हिंदी</a>
         <a id="audio_e" class="btn btn-light" tabindex="-1" role="button" aria-disabled="false">English</a>
         <br><br><br>
@@ -53,20 +58,29 @@
   <script>
     $("#audio_m").click(function(){
         $("#audio_m_a").show();
+        $("#audio_m").addClass("selected");
         $("#audio_h_a").hide();
+        $("#audio_h").removeClass("selected");
         $("#audio_e_a").hide();
+        $("#audio_e").removeClass("selected");
       });
 
     $("#audio_h").click(function(){
         $("#audio_h_a").show();
+        $("#audio_h").addClass("selected");
         $("#audio_m_a").hide();
+        $("#audio_m").removeClass("selected");
         $("#audio_e_a").hide();
+        $("#audio_e").removeClass("selected");
       });
 
       $("#audio_e").click(function(){
         $("#audio_e_a").show();
+        $("#audio_e").addClass("selected");
         $("#audio_m_a").hide();
+        $("#audio_m").removeClass("selected");
         $("#audio_h_a").hide();
+        $("#audio_h").removeClass("selected");
       });
     </script>
 </html>
