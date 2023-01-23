@@ -8,14 +8,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <style>
+        video {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -99;
+            }
         .view{
             display: none;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
-<body style="background-color: #e44f37;"><br><br>
-    <div class="container-fluid text-center" style="background-image:url(assets/MauliBackgroung4.jpg); background-size: cover;">
+<body style="background-color: #e44f37;">
+        <video playsinline autoplay muted loop poster="assets/MauliBackgroung4.jpg" id="bgvid">
+            <source src="assets/mauli_tree_video.mp4" type="video/mp4">
+        </video>
+    <div class="container-fluid text-center" style="background-color: #000000c7; width: 100vw; height: 100vh;">
+        <br><br>
         <img src="assets/logo1.png" width="150" alt="logo">
         <br><br><br>
         <audio controls id="audio_m_a" class="audio_m" style="margin: auto;">
@@ -34,36 +47,9 @@
         <br><br><br>
         <a href="https://play.google.com/store/apps/details?id=com.mss.mauli_green_army"><button type="button" class="btn btn-light">Download MGA App</button></a>
         <br><br>
-        <b>Support Mail:</b> <a href="mailto:maulitrust9999@gmail.com" style="color: black;">maulitrust9999@gmail.com</a>
+        <b style="color: white;">Support Mail:</b> <a href="mailto:maulitrust9999@gmail.com" style="color: white;">maulitrust9999@gmail.com</a>
     </div>    
 </body>
-<script>
-    // // Import the functions you need from the SDKs you need
-    // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-    // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-    // // TODO: Add SDKs for Firebase products that you want to use
-    // // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // // Your web app's Firebase configuration
-    // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    // const firebaseConfig = {
-    //   apiKey: "AIzaSyBw6t3kemduJAcgJoehF6ELhkeponji7pQ",
-    //   authDomain: "mauli-qr-code.firebaseapp.com",
-    //   projectId: "mauli-qr-code",
-    //   storageBucket: "mauli-qr-code.appspot.com",
-    //   messagingSenderId: "671792253697",
-    //   appId: "1:671792253697:web:dfb5e2be6c007fadc4e900",
-    //   measurementId: "G-CSJW5JGXJB"
-    // };
-  
-    // // Initialize Firebase
-    // const app = initializeApp(firebaseConfig);
-    // const analytics = getAnalytics(app);
-    function viewSong(data) {
-        console.log(data);
-
-    }
-  </script>
   <script>
     $("#audio_m").click(function(){
         $("#audio_m_a").show();
