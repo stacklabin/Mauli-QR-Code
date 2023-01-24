@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <style>
-        video {
+        video#bgvid {
             object-fit: cover;
             width: 100vw;
             height: 100vh;
@@ -25,6 +25,14 @@
             border-color: #e28d25 !important;
             color: #fff !important;
         }
+        #videoPlayer{
+            width: 40%;
+        }
+        @media (max-width: 768px) {
+            #videoPlayer{
+                width: 80%;
+            }
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -32,7 +40,7 @@
         <video playsinline autoplay muted loop poster="assets/MauliBackgroung4.jpg" id="bgvid">
             <source src="assets/mauli_tree_video.mp4" type="video/mp4">
         </video>
-    <div class="container-fluid text-center" style="background-color: #000000c7; width: 100vw; height: 100vh;">
+    <div class="container-fluid text-center" style="background-color: #000000c7; width: 100vw; height: 100%;">
         <br><br>
         <img src="assets/logo1.png" width="150" alt="logo">
         <br><br><br>
@@ -53,10 +61,21 @@
         <a id="audio_e" class="btn btn-light" tabindex="-1" role="button" aria-disabled="false">English</a>
         <a id="ppt" class="btn btn-light disabled" tabindex="-1" role="button" aria-disabled="true">PPT</a>
         <br><br><br>
-        <p style="color: #537f38; font-size: 13px; font-weight: 800;">पर्यावरण - स्वयंरोजगारासाठी</p>
+        <p style="color: #537f38; font-size: 13px; font-weight: 800;">वृक्षदानातून पर्यावरण व स्वयंरोजगार</p>
         <a href="https://play.google.com/store/apps/details?id=com.mss.mauli_green_army"><button type="button" class="btn btn-light">Download MGA App</button></a>
         <br><br>
-        <b style="color: white;">Support Mail:</b> <a href="mailto:maulitrust9999@gmail.com" style="color: white;">maulitrust9999@gmail.com</a>
+        <video id="videoPlayer" controls>
+            <source src="assets/drone_video.mp4" type="video/mp4">
+        </video>
+        <br><br>
+        <a href="https://www.facebook.com/"><img src="assets/facebook.png" width="40"></a>&nbsp;
+        <a href="instagram.com/"><img src="assets/instagram.png" width="40"></a>&nbsp;
+        <a href="https://twitter.com/"><img src="assets/twitter.png" width="40"></a>&nbsp;
+        <a href="https://youtu.be/Ypawog2PAsI"><img src="assets/youtube.png" width="40"></a>&nbsp;
+        <a href="mailto:maulitrust9999@gmail.com"><img src="assets/gmail.png" width="40"></a>&nbsp;
+        <a href="tel:+919850300905"><img src="assets/telephone.png" width="40"></a>&nbsp;
+        <br><br>
+        <!-- <b style="color: white;">Support Mail:</b> <a href="mailto:maulitrust9999@gmail.com" style="color: white;">maulitrust9999@gmail.com</a> -->
     </div>    
 </body>
   <script>
